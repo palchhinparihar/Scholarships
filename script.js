@@ -58,19 +58,30 @@ revealOnScroll(); // Initial check
 // Interactive hover effects
 document.querySelectorAll('.insight-card').forEach(card => {
     card.addEventListener('mouseenter', () => {
-        card.style.background = 'linear-gradient(135deg, #667eea, #764ba2)';
+        card.style.background = 'linear-gradient(135deg, #e6c69b, #c5854a)';
         card.style.color = 'white';
-        card.querySelector('.insight-title').style.color = 'white';
-        card.querySelector('.insight-description').style.color = 'rgba(255,255,255,0.9)';
-        card.querySelector('.insight-number').style.color = 'white';
+        const t = card.querySelector('.insight-title');
+        const d = card.querySelector('.insight-description');
+        const n = card.querySelector('.insight-number');
+        if (t) t.style.color = 'white';
+        if (d) d.style.color = 'rgba(255,255,255,0.95)';
+        if (n) n.style.color = 'white';
     });
     card.addEventListener('mouseleave', () => {
-        card.style.background = 'linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)';
-        card.style.color = '#333';
-        card.querySelector('.insight-title').style.color = '#333';
-        card.querySelector('.insight-description').style.color = '#666';
-        card.querySelector('.insight-number').style.webkitBackgroundClip = 'text';
-        card.querySelector('.insight-number').style.webkitTextFillColor = 'transparent';
-        card.querySelector('.insight-number').style.backgroundClip = 'text';
+        // Clear inline styles so CSS rules take effect again
+        card.style.background = '';
+        card.style.color = '';
+        const t = card.querySelector('.insight-title');
+        const d = card.querySelector('.insight-description');
+        const n = card.querySelector('.insight-number');
+        if (t) t.style.color = '';
+        if (d) d.style.color = '';
+        if (n) {
+            n.style.color = '';
+            n.style.webkitBackgroundClip = '';
+            n.style.webkitTextFillColor = '';
+            n.style.backgroundClip = '';
+            n.style.background = '';
+        }
     });
 });

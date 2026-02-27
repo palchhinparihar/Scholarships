@@ -7,10 +7,10 @@
 
 html,
 body {
-    width: 100vw;
+    width: 98.8vw;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #0a0612;
-    color: #e5d9fa;
+    background: #1b130f; /* soft dark brown */
+    color: #f6efe7; /* warm cream text */
     min-height: 100vh;
     scroll-behavior: smooth;
 }
@@ -21,23 +21,23 @@ nav {
     top: 15px;
     width: 90%;
     margin: 0 auto;
-    background: rgba(20, 0, 40, 0.98);
-    backdrop-filter: blur(8px);
+    background: rgba(33, 20, 14, 0.96); /* darker brown panel */
+    backdrop-filter: blur(6px);
     border-radius: 50px;
     padding: 1.2rem 2.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 1000;
-    box-shadow: 0 2px 24px 0 rgba(80, 0, 120, 0.18);
-    border-bottom: 1px solid #2d004d;
-     position: relative;
+    box-shadow: 0 2px 24px 0 rgba(40, 24, 12, 0.16);
+    border-bottom: 1px solid #3a1f14;
+    position: relative;
 }
 
 .menu-toggle {
     display: none;
     font-size: 2rem;
-    color: #c77dff;
+    color: #d59a66; /* tan icon */
     cursor: pointer;
     z-index: 1100;
     margin-left: 1rem;
@@ -104,9 +104,9 @@ nav {
 .logo {
     font-size: 1.7em;
     font-weight: bold;
-    color: #c77dff;
+    color: #d59a66; /* warm tan */
     letter-spacing: 1px;
-    text-shadow: 0 2px 8px #2d004d44;
+    text-shadow: 0 2px 8px rgba(58,31,20,0.25);
 }
 
 nav ul {
@@ -117,7 +117,7 @@ nav ul {
 
 nav a {
     text-decoration: none;
-    color: #b388ff;
+    color: #bfa07a; /* soft tan */
     font-weight: 500;
     font-size: 1.08em;
     letter-spacing: 0.5px;
@@ -125,7 +125,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #e0aaff;
+    color: #e6c69b;
 }
 
 /* ====== HERO SECTION ====== */
@@ -135,7 +135,7 @@ nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(120deg, #1a0026 0%, #4b006e 100%);
+    background: linear-gradient(120deg, #2b1a14 0%, #5a3a2a 100%); /* brown gradient */
     color: #fff;
     text-align: center;
     padding: 2.5rem 1rem 1rem 1rem;
@@ -156,7 +156,7 @@ nav a:hover {
 .hero::before {
     width: 420px;
     height: 420px;
-    background: #a259ff;
+    background: #261f19; /* warm amber glow */
     top: -120px;
     right: -120px;
     animation: float 7s ease-in-out infinite;
@@ -165,7 +165,7 @@ nav a:hover {
 .hero::after {
     width: 320px;
     height: 320px;
-    background: #5f0a87;
+    background: #6b4226; /* deep brown accent */
     bottom: -70px;
     left: -70px;
     animation: float 9s ease-in-out infinite;
@@ -216,7 +216,7 @@ nav a:hover {
 .cta-button {
     display: inline-block;
     padding: 1rem 2.7rem;
-    background: linear-gradient(90deg, #a259ff 0%, #5f0a87 100%);
+    background: linear-gradient(90deg, #c5854a 0%, #6b4226 100%); /* amber -> deep brown */
     color: #fff;
     border: none;
     border-radius: 50px;
@@ -224,38 +224,38 @@ nav a:hover {
     font-weight: bold;
     cursor: pointer;
     transition: all 0.25s;
-    box-shadow: 0 8px 32px rgba(80, 0, 120, 0.18);
+    box-shadow: 0 8px 32px rgba(46, 28, 14, 0.18);
     letter-spacing: 0.5px;
 }
 
 .cta-button:hover {
     transform: translateY(-4px) scale(1.04);
-    background: linear-gradient(90deg, #5f0a87 0%, #a259ff 100%);
-    box-shadow: 0 16px 40px rgba(80, 0, 120, 0.22);
+    background: linear-gradient(90deg, #6b4226 0%, #c5854a 100%);
+    box-shadow: 0 16px 40px rgba(46, 28, 14, 0.22);
 }
 
 /* ====== SHOUTOUT BOX ====== */
 .shoutout {
     margin: 2em auto 1em auto;
     max-width: 700px;
-    background: rgba(162, 89, 255, 0.10);
+    background: rgba(197,133,74,0.08); /* subtle amber wash */
     padding: 1.1em 1.7em;
     border-radius: 10px;
-    color: #c7a4ff;
+    color: #e9dccc;
     text-align: center;
     font-size: 1.13em;
-    box-shadow: 0 2px 16px rgba(80, 0, 120, 0.10);
-    border: 1px solid #a259ff33;
+    box-shadow: 0 2px 16px rgba(46, 28, 14, 0.08);
+    border: 1px solid rgba(197,133,74,0.12);
 }
 
 .shoutout a {
-    color: #a259ff;
+    color: #c5854a;
     text-decoration: underline;
     transition: color 0.2s;
 }
 
 .shoutout a:hover {
-    color: #fff;
+    color: #fff8f2;
 }
 
 .shoutout .fa-database {
@@ -271,7 +271,7 @@ nav a:hover {
 
 /* ====== INSIGHTS SECTION ====== */
 .insights-section {
-    background: #1a0026;
+    background: #261f19;
     padding: 3.5rem 2rem 2.5rem 2rem;
     margin-bottom: 2.5rem;
     border-radius: 18px;
@@ -282,7 +282,7 @@ nav a:hover {
     text-align: center;
     font-size: 2.6rem;
     margin-bottom: 1.1rem;
-    background: linear-gradient(90deg, #a259ff, #5f0a87);
+    background: linear-gradient(90deg, #c5854a, #6b4226);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -305,14 +305,14 @@ nav a:hover {
 }
 
 .insight-card {
-    background: linear-gradient(120deg, #2d004d 60%, #4b006e 100%);
+    background: linear-gradient(120deg, #3a1f14 60%, #5a3a2a 100%);
     padding: 2.1rem 1.2rem;
     border-radius: 16px;
     font-size: 2.1em;
-    color: #e0aaff;
+    color: #f1e6da;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 2px 16px rgba(80, 0, 120, 0.10);
+    box-shadow: 0 2px 16px rgba(46, 28, 14, 0.08);
     cursor: pointer;
     transition: transform 0.18s, box-shadow 0.18s;
 }
@@ -325,10 +325,7 @@ nav a:hover {
 .insight-number {
     font-size: 2.6rem;
     font-weight: bold;
-    background: linear-gradient(90deg, #a259ff, #5f0a87);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #f6efe7; /* light cream for high contrast */
     margin-bottom: 0.5rem;
 }
 
@@ -336,18 +333,18 @@ nav a:hover {
     font-size: 1.18rem;
     font-weight: bold;
     margin-bottom: 0.4rem;
-    color: #c77dff;
+    color: #d59a66;
 }
 
 .insight-description {
-    color: #b388ff;
+    color: #d9cdbf;
     font-size: 0.98rem;
     line-height: 1.6;
 }
 
 /* ====== VISUALIZATION SECTION ====== */
 .viz-section {
-    background: #1a0026;
+    background: #261f19;
     margin-bottom: 2.5rem;
     border-radius: 18px;
     overflow: hidden;
@@ -355,7 +352,7 @@ nav a:hover {
 }
 
 .viz-header {
-    background: linear-gradient(90deg, #a259ff, #5f0a87);
+    background: linear-gradient(90deg, #c5854a, #6b4226);
     color: #fff;
     padding: 2.2rem 2rem 1.2rem 2rem;
 }
@@ -381,33 +378,33 @@ nav a:hover {
 
 .viz-text h3 {
     font-size: 1.35rem;
-    color: #a259ff;
+    color: #c5854a;
     margin-bottom: 1rem;
 }
 
 .viz-text p {
-    color: #b388ff;
+    color: #e9dbcc;
     line-height: 1.7;
     margin-bottom: 1rem;
     font-size: 1.07rem;
 }
 
 .fact {
-    background: #2d004d;
-    border-left: 4px solid #a259ff;
+    background: #3a1f14;
+    border-left: 4px solid #c5854a;
     padding: 1rem 1.5rem;
     margin-top: 1rem;
     border-radius: 7px;
-    color: #e0d7ff;
+    color: #f2e6d9;
 }
 
 .fact strong {
-    color: #a259ff;
+    color: #c5854a;
 }
 
 /* ====== STATS SECTION ====== */
 .stats-section {
-    background: #1a0026;
+    background: #261f19;
     padding: 3rem 2rem;
     border-radius: 18px;
     margin-bottom: 2.5rem;
@@ -424,11 +421,11 @@ nav a:hover {
 .stat {
     text-align: center;
     padding: 2.2rem 1.2rem;
-    background: linear-gradient(90deg, #a259ff 0%, #5f0a87 100%);
-    color: #fff;
+    background: linear-gradient(90deg, #e6c69b 0%, #c5854a 100%);
+    color: #2b150a;
     border-radius: 12px;
     transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 16px rgba(80, 0, 120, 0.10);
+    box-shadow: 0 2px 16px rgba(46, 28, 14, 0.08);
 }
 
 .stat:hover {
@@ -449,20 +446,20 @@ nav a:hover {
 
 /* ====== FOOTER ====== */
 footer {
-    background: #12001a;
-    color: #a259ff;
+    background: #24140f;
+    color: #d9bfa3;
     text-align: center;
     padding: 1.7em 0 1.2em 0;
-    border-top: 1px solid #2d004d;
+    border-top: 1px solid #3a1f14;
     margin-top: 2em;
     font-size: 1.13em;
-    box-shadow: 0 -2px 16px rgba(80, 0, 120, 0.10);
+    box-shadow: 0 -2px 16px rgba(46, 28, 14, 0.06);
     letter-spacing: 0.2px;
 }
 
 /* ====== INTERACTIVE TOGGLE ====== */
 .toggle-btn {
-    background: linear-gradient(90deg, #a259ff 0%, #5f0a87 100%);
+    background: linear-gradient(90deg, #c5854a 0%, #6b4226 100%);
     color: #fff;
     border: none;
     padding: 0.7rem 1.5rem;
@@ -472,11 +469,11 @@ footer {
     transition: all 0.22s;
     margin-top: 1rem;
     font-size: 1.01em;
-    box-shadow: 0 2px 12px rgba(80, 0, 120, 0.10);
+    box-shadow: 0 2px 12px rgba(46, 28, 14, 0.08);
 }
 
 .toggle-btn:hover {
-    background: linear-gradient(90deg, #5f0a87 0%, #a259ff 100%);
+    background: linear-gradient(90deg, #6b4226 0%, #c5854a 100%);
     transform: translateX(5px) scale(1.04);
 }
 
