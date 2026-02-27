@@ -1,3 +1,98 @@
+// ====== 3D STARFIELD HERO BACKGROUND ======
+(function () {
+    const canvas = document.getElementById('hero-bg-canvas');
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+
+    const NUM_STARS = 220;
+    const SPEED = 5;
+    let stars = [];
+    let W, H;
+
+    function resize() {
+        W = canvas.width = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+    }
+
+    function makeStar() {
+        return {
+            x: (Math.random() - 0.5) * W * 2,
+            y: (Math.random() - 0.5) * H * 2,
+            z: Math.random() * W,
+            pz: 0
+        };
+    }
+
+    function initStars() {
+        stars = [];
+        for (let i = 0; i < NUM_STARS; i++) {
+            const s = makeStar();
+            s.z = Math.random() * W; // spread initial positions in depth
+            s.pz = s.z;
+            stars.push(s);
+        }
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        // soft trail — fades old frames
+        ctx.fillStyle = 'rgba(27, 19, 15, 0.22)';
+        ctx.fillRect(0, 0, W, H);
+
+        const cx = W / 2;
+        const cy = H / 2;
+
+        for (const star of stars) {
+            star.pz = star.z;
+            star.z -= SPEED;
+
+            if (star.z <= 1) {
+                star.x = (Math.random() - 0.5) * W * 2;
+                star.y = (Math.random() - 0.5) * H * 2;
+                star.z = W;
+                star.pz = W;
+                continue;
+            }
+
+            const sx = (star.x / star.z) * W + cx;
+            const sy = (star.y / star.z) * H + cy;
+            const px = (star.x / star.pz) * W + cx;
+            const py = (star.y / star.pz) * H + cy;
+
+            const progress = 1 - star.z / W;
+            const size = Math.max(0.3, progress * 2.8);
+            const alpha = Math.min(1, progress * 1.4);
+
+            // Color cycles between amber, cream and deep orange for depth
+            const r = Math.round(180 + 75 * progress);
+            const g = Math.round(90 + 100 * progress);
+            const b = Math.round(30 + 60 * progress);
+
+            ctx.beginPath();
+            ctx.moveTo(px, py);
+            ctx.lineTo(sx, sy);
+            ctx.strokeStyle = `rgba(${r},${g},${b},${alpha})`;
+            ctx.lineWidth = size;
+            ctx.stroke();
+        }
+    }
+
+    function init() {
+        resize();
+        initStars();
+        animate();
+    }
+
+    window.addEventListener('resize', () => { resize(); initStars(); });
+    // Wait for layout to settle before reading dimensions
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+})();
+// ====== END 3D STARFIELD ======
+
 // Smooth scrolling for navigation
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
