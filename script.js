@@ -9,6 +9,23 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Hamburger menu toggle
+const menuToggle = document.getElementById('menu-toggle');
+const navList = document.getElementById('nav-list');
+if (menuToggle && navList) {
+    menuToggle.addEventListener('click', () => {
+        navList.classList.toggle('open');
+        menuToggle.classList.toggle('active');
+    });
+    // Optional: close menu when a link is clicked (for better UX)
+    navList.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navList.classList.remove('open');
+            menuToggle.classList.remove('active');
+        });
+    });
+}
+
 // Toggle details on cards
 function toggleDetails(card) {
     card.style.transform = card.style.transform === 'scale(1.05)' ? 'scale(1)' : 'scale(1.05)';
