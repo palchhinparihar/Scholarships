@@ -9,20 +9,79 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Hamburger menu toggle
+// Hamburger menu toggle (robust): toggles ARIA, supports keyboard, and closes on outside click
 const menuToggle = document.getElementById('menu-toggle');
 const navList = document.getElementById('nav-list');
+
+// Debug logs to help verify behavior on mobile browsers
+console.log('hamburger init — menuToggle found:', !!menuToggle, 'navList found:', !!navList);
+
+function closeNav() {
+    if (!navList) return;
+    navList.classList.remove('open');
+    // remove any temporary inline debug styles
+    navList.style.opacity = '';
+    navList.style.pointerEvents = '';
+    navList.style.transform = '';
+    navList.style.display = '';
+    if (menuToggle) {
+        menuToggle.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
+    }
+    document.body.classList.remove('nav-open');
+}
+
+function openNav() {
+    if (!navList) return;
+    navList.classList.add('open');
+    // TEMPORARY: force visible via inline styles to debug mobile rendering
+    navList.style.opacity = '1';
+    navList.style.pointerEvents = 'auto';
+    navList.style.transform = 'translateX(-50%) translateY(0)';
+    navList.style.display = 'flex';
+    if (menuToggle) {
+        menuToggle.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
+    }
+    document.body.classList.add('nav-open');
+}
+
 if (menuToggle && navList) {
-    menuToggle.addEventListener('click', () => {
-        navList.classList.toggle('open');
-        menuToggle.classList.toggle('active');
+    // ensure ARIA state
+    menuToggle.setAttribute('aria-expanded', 'false');
+
+    menuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const willOpen = !navList.classList.contains('open');
+        console.log('hamburger clicked — willOpen:', willOpen);
+        if (navList.classList.contains('open')) closeNav(); else openNav();
+        // Log class state after toggle
+        console.log('navList.classList.contains("open") =>', navList.classList.contains('open'));
     });
-    // Optional: close menu when a link is clicked (for better UX)
+
+    // keyboard support (Enter / Space)
+    menuToggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            menuToggle.click();
+        }
+    });
+
+    // close when a nav link is clicked
     navList.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navList.classList.remove('open');
-            menuToggle.classList.remove('active');
-        });
+        link.addEventListener('click', () => closeNav());
+    });
+
+    // close when clicking outside the nav list
+    document.addEventListener('click', (e) => {
+        if (!navList.contains(e.target) && !menuToggle.contains(e.target) && navList.classList.contains('open')) {
+            closeNav();
+        }
+    });
+
+    // close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && navList.classList.contains('open')) closeNav();
     });
 }
 
