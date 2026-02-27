@@ -8,7 +8,7 @@
 html,
 body {
     width: 98.8vw;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Nunito', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #1b130f; /* soft dark brown */
     color: #f6efe7; /* warm cream text */
     min-height: 100vh;
@@ -133,7 +133,8 @@ nav {
 
 .logo {
     font-size: 1.7em;
-    font-weight: bold;
+    font-weight: 700;
+    font-family: 'Playfair Display', Georgia, serif;
     color: #d59a66; /* warm tan */
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(58,31,20,0.25);
@@ -232,15 +233,20 @@ nav a:hover {
 
 .hero h1 {
     font-size: 3.2rem;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
     margin-bottom: 1.1rem;
     text-shadow: 0 4px 24px #2d004d55;
     letter-spacing: 1px;
 }
 
 .hero p {
-    font-size: 1.25rem;
+    font-size: 1.45rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
     margin-bottom: 2.2rem;
     opacity: 0.96;
+    letter-spacing: 0.3px;
 }
 
 .cta-button {
@@ -310,6 +316,7 @@ nav a:hover {
 
 .section-title {
     text-align: center;
+    font-family: 'Playfair Display', Georgia, serif;
     font-size: 2.6rem;
     margin-bottom: 1.1rem;
     background: linear-gradient(90deg, #c5854a, #6b4226);
@@ -323,7 +330,9 @@ nav a:hover {
     color: #b388ff;
     background: transparent;
     margin-bottom: 2.5rem;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 500;
 }
 
 /* ====== INSIGHTS GRID ====== */
@@ -389,6 +398,7 @@ nav a:hover {
 
 .viz-header h2 {
     font-size: 2.1rem;
+    font-family: 'Playfair Display', Georgia, serif;
     margin-bottom: 0.5rem;
 }
 
@@ -408,6 +418,7 @@ nav a:hover {
 
 .viz-text h3 {
     font-size: 1.35rem;
+    font-family: 'Playfair Display', Georgia, serif;
     color: #c5854a;
     margin-bottom: 1rem;
 }

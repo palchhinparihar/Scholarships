@@ -1,6 +1,6 @@
 # 🎓 ScholarHub — Global Scholarships Hub
 
-> **This project is an official entry in the [Codedex](https://www.codedex.io/) February 2026 Monthly Challenge.**
+> **This project is an official entry in the [Codedex](https://www.codedex.io) February 2026 Monthly Challenge.**
 
 Made by **[Palchhin](https://www.codedex.io/@palchhin)**
 
