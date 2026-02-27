@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Scholarships Hub - Discover Opportunities Worldwide</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🎓 ScholarHub</div>
+        <ul>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#countries">Countries</a></li>
+            <li><a href="#degrees">Degrees</a></li>
+            <li><a href="#funding">Funding</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Global Scholarships Unveiled</h1>
+            <p>Exploring 877+ scholarship opportunities across the world</p>
+            <button class="cta-button" onclick="document.getElementById('insights').scrollIntoView({behavior: 'smooth'})">
+                Discover More
+            </button>
+        </div>
+        <!-- Dataset Shoutout -->
+        <div class="shoutout">
+            <i class="fa-solid fa-database"></i>
+            Dataset sourced from <a href="https://www.kaggle.com/datasets/timmofeyy/-universities-schoolarships-all-around-the-world" target="_blank">Kaggle</a> (last updated 4 years ago)
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Key Insights Section -->
+        <section class="insights-section" id="insights">
+            <h2 class="section-title">🔍 Key Insights</h2>
+            <p class="section-subtitle">Quick facts about global scholarships</p>
+            
+            <div class="insights-grid">
+                <div class="insight-card" onclick="toggleDetails(this)">
+                    <div class="insight-number">877</div>
+                    <div class="insight-title">Total Scholarships</div>
+                    <div class="insight-description">Indexed and analyzed from around the world</div>
+                </div>
+
+                <div class="insight-card" onclick="toggleDetails(this)">
+                    <div class="insight-number">35%</div>
+                    <div class="insight-title">Master's Programs</div>
+                    <div class="insight-description">Most scholarships are for postgraduate studies</div>
+                </div>
+
+                <div class="insight-card" onclick="toggleDetails(this)">
+                    <div class="insight-number">307</div>
+                    <div class="insight-title">UK Dominance</div>
+                    <div class="insight-description">United Kingdom leads with most scholarships</div>
+                </div>
+
+                <div class="insight-card" onclick="toggleDetails(this)">
+                    <div class="insight-number">181</div>
+                    <div class="insight-title">US Opportunities</div>
+                    <div class="insight-description">United States offers second most scholarships</div>
+                </div>
+
+                <div class="insight-card" onclick="toggleDetails(this)">
+                    <div class="insight-number">100%</div>
+                    <div class="insight-title">Fully Funded</div>
+                    <div class="insight-description">Most common funding type available</div>
+                </div>
+
+                <div class="insight-card" onclick="toggleDetails(this)">
+                    <div class="insight-number">50+</div>
+                    <div class="insight-title">Countries Active</div>
+                    <div class="insight-description">Scholarships available on multiple continents</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Countries Visualization -->
+        <section class="viz-section" id="countries">
+            <div class="viz-header">
+                <h2>🌍 Which Countries Offer the Most Scholarships?</h2>
+                <p>A curious question about global educational opportunities</p>
+            </div>
+            <div class="viz-content">
+                <div>
+                    <img src="img/countries.png" alt="Top Countries Offering Scholarships" class="viz-image">
+                </div>
+                <div class="viz-text">
+                    <h3>The Geographic Leaders</h3>
+                    <p>
+                        The data reveals a fascinating pattern: <strong>English-speaking countries dominate</strong> 
+                        the scholarship landscape. The United Kingdom leads by a significant margin with 307 scholarships, 
+                        followed by the United States with 181.
+                    </p>
+                    <p>
+                        What's interesting is the third position: <strong>Canada</strong> with 98 scholarships, 
+                        maintaining the English-language trend. This suggests that language accessibility might be 
+                        a key factor in scholarship promotion and accessibility.
+                    </p>
+                    <div class="fact">
+                        <strong>💡 Fun Fact:</strong> The top 3 countries (UK, US, Canada) account for approximately 
+                        50% of all scholarships in this database, making them the primary destinations for international students.
+                    </div>
+                    <button class="toggle-btn" onclick="toggleQuestion(this)">Show More Analysis</button>
+                    <div class="hidden" style="margin-top: 1rem; color: #666;">
+                        <p>The concentration of scholarships in these countries reflects their strong investment in international 
+                        education and their position as global educational hubs. Additionally, these countries benefit from being 
+                        top-tier universities and well-established scholarship networks.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Degrees Visualization -->
+        <section class="viz-section" id="degrees">
+            <div class="viz-header">
+                <h2>🎓 What Degree Levels Do Scholarships Support?</h2>
+                <p>Understanding the educational investment patterns</p>
+            </div>
+            <div class="viz-content">
+                <div class="viz-text">
+                    <h3>Distribution Across Education Levels</h3>
+                    <p>
+                        Master's degrees take the lead with 32.7% of all scholarships, reflecting a global trend 
+                        toward <strong>postgraduate education and specialization</strong>. This suggests that funding bodies 
+                        prioritize advanced research and professional development.
+                    </p>
+                    <p>
+                        Bachelor's programs follow closely at 29.8%, while PhD scholarships account for 20.5%. 
+                        The remaining scholarships are distributed between short courses and other programs.
+                    </p>
+                    <div class="fact">
+                        <strong>🎯 Key Insight:</strong> Combined, Master's and Bachelor's programs represent over 62% 
+                        of scholarship opportunities, indicating a strong focus on accredited degree programs over alternative learning.
+                    </div>
+                    <button class="toggle-btn" onclick="toggleQuestion(this)">Explore Investment Trends</button>
+                    <div class="hidden" style="margin-top: 1rem; color: #666;">
+                        <p>The significant investment in postgraduate education reflects the modern knowledge economy's demand 
+                        for specialized skills. Organizations are increasingly funding Master's programs to build expertise in 
+                        emerging fields like AI, sustainability, and digital transformation.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="img/degree_donut.png" alt="Scholarships by Degree Level" class="viz-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- Funding Visualization -->
+        <section class="viz-section" id="funding">
+            <div class="viz-header">
+                <h2>💰 How Are Scholarships Funded?</h2>
+                <p>Understanding different support mechanisms for students</p>
+            </div>
+            <div class="viz-content">
+                <div>
+                    <img src="img/funding.png" alt="Common Scholarship Funding Types" class="viz-image">
+                </div>
+                <div class="viz-text">
+                    <h3>The Funding Landscape</h3>
+                    <p>
+                        "Fully Funded" scholarships dominate the landscape, providing complete financial support. 
+                        This is followed by "Partially Funded" opportunities, which cover a portion of educational costs. 
+                        Both categories combined represent approximately <strong>70% of all scholarships</strong>.
+                    </p>
+                    <p>
+                        Specific award amounts (£10,000, £5,000, £1,000, $3,000) also appear frequently, offering 
+                        targeted financial assistance for specific needs.
+                    </p>
+                    <div class="fact">
+                        <strong>✨ Remarkable Discovery:</strong> Students have a strong likelihood (70%+) of finding 
+                        scholarships that cover most or all of their educational expenses!
+                    </div>
+                    <button class="toggle-btn" onclick="toggleQuestion(this)">Details on Funding Types</button>
+                    <div class="hidden" style="margin-top: 1rem; color: #666;">
+                        <p>Fully funded scholarships typically come from government bodies and major organizations committed 
+                        to developing talent. Partially funded options often come from universities and private foundations. 
+                        Fixed-amount scholarships are common from smaller organizations and alumni funds.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <h2 class="section-title">📊 Quick Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat">
+                    <div class="stat-number">877</div>
+                    <div class="stat-label">Scholarships Analyzed</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Countries Represented</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Degree Types</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Funding Categories</div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>
+            <i class="fa-solid fa-user-graduate" style="margin-right: 0.5em;"></i>
+            ScholarHub | Empowering students through scholarship discovery | © 2026
+        </p>
+        <p>Data-driven insights into global educational opportunities</p>
+        <p style="margin-top:0.5em; font-size: 1em;">
+            <i class="fa-solid fa-code"></i> Created by <span style="font-weight:bold;">hp</span>
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
