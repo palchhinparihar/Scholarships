@@ -1,6 +1,6 @@
-# 🎓 ScholarHub — Every Dream Deserves a Door
+# 🎓 ScholarHub - Every Dream Deserves a Door
 
-> *"Somewhere out there, a scholarship exists with your name on it. You just haven't found it yet."*
+> *"Somewhere out there, a scholarship exists with your name on it. You just haven't found it yet.~"*
 
 **Made by [Palchhin](https://www.codedex.io/@palchhin)** · An official entry in the [Codedex](https://www.codedex.io) February 2026 Monthly Challenge
 
@@ -8,7 +8,7 @@
 
 ## The Story Behind It
 
-It starts with a dream — studying abroad, chasing a degree that changes everything, building a life that once felt impossibly far away. But between that dream and reality sits a mountain of scattered information: spreadsheets, university portals, forum threads, and dead links.
+It starts with a dream - studying abroad, chasing a degree that changes everything, building a life that once felt impossibly far away. But between that dream and reality sits a mountain of scattered information: spreadsheets, university portals, forum threads, and dead links.
 
 **ScholarHub was built to flatten that mountain.**
 
@@ -54,11 +54,11 @@ Every chart, every stat, every section was built to answer a real question a rea
 
 The project lives in three layers:
 
-**The data layer** — A Kaggle dataset was pulled apart in a Jupyter Notebook, cleaned, analyzed, and transformed into the insights you see on screen.
+**The data layer**: A Kaggle dataset was pulled apart in a Jupyter Notebook, cleaned, analyzed, and transformed into the insights you see on screen.
 
-**The logic layer** — JavaScript brings the page to life: smooth scrolling, dynamic counters, responsive charts, and interactions that make the data feel approachable rather than overwhelming.
+**The logic layer**: JavaScript brings the page to life: smooth scrolling, dynamic counters, responsive charts, and interactions that make the data feel approachable rather than overwhelming.
 
-**The design layer** — Playfair Display for the elegance. Nunito for the warmth. A color palette that feels professional without feeling cold. Because if you're going to tell someone about life-changing opportunities, the page should feel like it matters.
+**The design layer**: Playfair Display for the elegance. Nunito for the warmth. A color palette that feels professional without feeling cold. Because if you're going to tell someone about life-changing opportunities, the page should feel like it matters.
 
 ---
 
@@ -92,7 +92,7 @@ No servers, no build steps, no friction.
 
 ## 📦 Dataset Credit
 
-Raw data from [Kaggle — Universities & Scholarships All Around the World](https://www.kaggle.com/datasets/timmofeyy/-universities-schoolarships-all-around-the-world). The insights, design, and storytelling are all original.
+Raw data from [Kaggle - Universities & Scholarships All Around the World](https://www.kaggle.com/datasets/timmofeyy/-universities-schoolarships-all-around-the-world). The insights, design, and storytelling are all original.
 
 ---
 
